@@ -1,0 +1,21 @@
+.mapContainer {
+  width: 100%;
+  position: relative;
+  height: 100%;
+  .layers {
+    position: absolute;
+    bottom: 200px;
+    left: 380px;
+    border-radius: 10px;
+    background-color: rgba(45, 45, 45, 0.5);
+    backdrop-filter: blur(5px) brightness(100%);
+    padding: 20px 10px;
+    z-index: 999;
+    font-size: 14px;
+    color: #fff;
+    :global(.ant-radio-label) {
+      color: #fff;
+      font-family: Alibaba-Regular, sans-serif;
+    }
+  }
+}

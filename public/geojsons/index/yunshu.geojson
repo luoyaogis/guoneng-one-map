@@ -1,0 +1,35 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [117.864874, 38.324132]
+      },
+      "properties": {
+        "name": "国能黄骅港务有限责任公司"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [117.778392, 38.272738]
+      },
+      "properties": {
+        "name": "国家能源集团港口有限公司"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [116.302481, 39.98144]
+      },
+      "properties": {
+        "name": "国能远海航运有限公司"
+      }
+    }
+  ]
+}

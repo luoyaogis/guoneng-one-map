@@ -1,0 +1,89 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [111.091774, 39.024542]
+      },
+      "properties": {
+        "id": "m-fb22486c-f86c-49c7-8dd4-ebbff732508c",
+        "pixelSize": 12,
+        "color": "#3388ff"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [110.061175, 39.477356]
+      },
+      "properties": {
+        "id": "m-8781bd6e-0503-4847-b158-9737e37d03ef",
+        "pixelSize": 12,
+        "color": "#3388ff"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [111.091284, 39.024354]
+      },
+      "properties": {
+        "id": "m-10d59ee6-e2d1-4eaa-b5d8-39cd597cdc11",
+        "pixelSize": 12,
+        "color": "#3388ff"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [110.132565, 39.412783]
+      },
+      "properties": {
+        "id": "m-95585dc3-379b-464d-9b36-73ed9e369176",
+        "pixelSize": 12,
+        "color": "#3388ff"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [110.239583, 39.258049]
+      },
+      "properties": {
+        "id": "m-dff996c9-bd7d-4309-97ee-9b42f696665b",
+        "pixelSize": 12,
+        "color": "#3388ff"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [110.201236, 39.306956]
+      },
+      "properties": {
+        "id": "m-9366f253-8967-4c9c-b1fc-b53415ca2200",
+        "pixelSize": 12,
+        "color": "#3388ff"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [110.169245, 38.741314]
+      },
+      "properties": {
+        "id": "m-04f4fcd4-7606-4231-a74e-c63745135ff2",
+        "pixelSize": 12,
+        "color": "#3388ff"
+      }
+    }
+  ]
+}

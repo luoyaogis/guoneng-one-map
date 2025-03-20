@@ -1,0 +1,57 @@
+.chatImg {
+  position: absolute;
+  top: 30px;
+  right: 380px;
+  z-index: 999;
+  cursor: pointer;
+  img {
+    width: 40px;
+  }
+}
+.chatList {
+  position: absolute;
+  top: 80px;
+  right: 380px;
+  z-index: 999;
+  width: 380px;
+  padding: 10px;
+  height: fit-content;
+  border-radius: 20px;
+  background-color: rgba(45, 45, 45, 0.5);
+  backdrop-filter: blur(5px) brightness(100%);
+  font-family: Alibaba-Regular, sans-serif;
+  color: #fff;
+  text-align: center;
+  .header {
+    position: relative;
+    .close {
+      position: absolute;
+      right: 0;
+      cursor: pointer;
+    }
+  }
+  .messages {
+    padding: 10px 0;
+    min-height: 400px;
+    .message {
+      margin: 15px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .content {
+        max-width: calc(100% - 40px);
+        width: fit-content;
+        color: #f9f9f9;
+        text-align: left;
+        background-color: #ffffff32;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+      .avatar {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}

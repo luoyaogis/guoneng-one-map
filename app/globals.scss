@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+.cesium-widget-credits {
+  /* 去除cesium logo */
+  display: none !important;
+}
+.ant-menu {
+  font-family: Alibaba-Regular, sans-serif;
+  font-size: 16px;
+}
+.ant-breadcrumb,
+.ant-form-item-label,
+.ant-btn {
+  font-family: Alibaba-Regular, sans-serif;
+}
+
+.ant-table-thead {
+  font-family: Alibaba-Bold, sans-serif;
+  font-size: 16px;
+}
+.ant-table-body {
+  font-family: Alibaba-Regular, sans-serif;
+}

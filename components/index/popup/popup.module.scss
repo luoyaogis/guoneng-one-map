@@ -1,0 +1,22 @@
+.popup {
+  width: 320px;
+  height: fit-content;
+  overflow-y: auto;
+  position: absolute;
+  left: 380px;
+  top: 20px;
+  z-index: 999;
+  border-radius: 20px;
+  background-color: rgba(45, 45, 45, 0.5);
+  backdrop-filter: blur(5px) brightness(100%);
+  padding: 20px 10px;
+  display: none;
+  .close {
+    color:#fff;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    z-index: 999;
+  }
+}

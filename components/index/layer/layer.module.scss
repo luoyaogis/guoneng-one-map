@@ -1,0 +1,35 @@
+.floatBtn {
+  position: absolute;
+  top: 80px;
+  right: 430px;
+  z-index: 999;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: #1a202c;
+  font-family: Alibaba-Regular, sans-serif;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px) brightness(100%);
+}
+.floatLayer {
+  position: absolute;
+  top: 125px;
+  right: 430px;
+  background-color: #fff;
+  backdrop-filter: blur(5px) brightness(100%);
+  color: #1a202c;
+  font-family: Alibaba-Regular, sans-serif;
+  z-index: 999;
+  width: 300px;
+  height: fit-content;
+  padding: 20px 10px;
+  border-radius: 10px;
+  transition: 0.5s;
+  display: block;
+  &.hidden {
+    opacity: 0;
+    z-index: -1;
+  }
+}

@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  color: #fff;
+  font-family: Alibaba-Bold, sans-serif;
+  height: 70px;
+  background: url("http://openge.org.cn/website/taihu/static/img/top_bg.f6511dce.png")
+    100% 80px;
+  background-position: center;
+  position: relative;
+  .title {
+    font-size: 26px;
+    cursor: pointer;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(141, 241, 255, 0.8) 100%
+    );
+    -webkit-background-clip: text; /* 关键属性 */
+    background-clip: text;
+    color: transparent;
+    font-style: italic;
+  }
+  .return {
+    position: absolute;
+    right: 50px;
+    font-size: 16px;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

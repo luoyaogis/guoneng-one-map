@@ -1,0 +1,25 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [87.669472, 44.121238]
+      },
+      "properties": {
+        "name": "国能新疆化工有限公司"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [110.135014, 38.653333]
+      },
+      "properties": {
+        "name": "国能榆林化工有限公司"
+      }
+    }
+  ]
+}

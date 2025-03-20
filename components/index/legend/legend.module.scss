@@ -1,0 +1,24 @@
+.legends {
+  position: absolute;
+  z-index: 999;
+  bottom: 40px;
+  left: 380px;
+  width: fit-content;
+  height: fit-content;
+  padding: 15px 20px;
+  border-radius: 10px;
+  background-color: rgba(45, 45, 45, 0.5);
+  backdrop-filter: blur(5px) brightness(100%);
+  color: #fff;
+  font-family: Alibaba-Regular, sans-serif;
+  .legend {
+    display: flex;
+    align-items: center;
+    margin: 7px 0;
+    .icon {
+      width: 14px;
+      margin-right: 10px;
+
+    }
+  }
+}

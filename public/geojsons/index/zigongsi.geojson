@@ -1,0 +1,55 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "龙源电力集团股份有限公司"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [116.350964, 39.928291]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "国电电力发展股份有限公司"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [116.403215, 40.001028]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "中国神华煤制油化工有限公司新疆煤化工分公司"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [87.664793, 44.118945]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "中国神华能源股份有限公司广东分公司"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [113.4269, 23.09831]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "国电科技环保集团股份有限公司"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [116.27013, 39.913302]
+      }
+    }
+  ]
+}

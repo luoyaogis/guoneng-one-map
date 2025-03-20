@@ -1,0 +1,65 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [116.351033, 39.928254]
+      },
+      "properties": {
+        "name": "龙源电力集团股份有限公司"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [116.403177, 40.001094]
+      },
+      "properties": {
+        "name": "国电电力发展股份有限公司"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [110.167444, 38.734749]
+      },
+      "properties": {
+        "name": "国华锦界能源有限责任公司"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.822111, 29.946158]
+      },
+      "properties": {
+        "name": "浙江北仑发电厂"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [112.918138, 21.866763]
+      },
+      "properties": {
+        "name": "国华台山电厂"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [116.376979, 29.826712]
+      },
+      "properties": {
+        "name": "国能神华九江发电有限责任公司"
+      }
+    }
+  ]
+}

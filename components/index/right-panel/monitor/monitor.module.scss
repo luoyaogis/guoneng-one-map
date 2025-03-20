@@ -1,0 +1,58 @@
+.monitor {
+  :global(.ant-tabs-tab) {
+    color: #fdfdfd;
+    font-family: Alibaba-Regular, sans-serif;
+  }
+  :global(.ant-tabs-tab-active) {
+    color: #fff;
+    font-family: Alibaba-Bold, sans-serif;
+    :global(.ant-tabs-tab-btn) {
+      color: #fff;
+      font-family: Alibaba-Bold, sans-serif;
+    }
+  }
+}
+.card {
+  color: #fff;
+  font-family: Alibaba-Regular, sans-serif;
+  margin-bottom: 10px;
+  span.link {
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  :global(.ant-card-head) {
+    border-bottom: none;
+    padding: 0 16px;
+  }
+  :global(.ant-card-body) {
+    padding: 8px 16px;
+  }
+  &:global(.ant-card) {
+    background-color: transparent;
+  }
+  &:global(.ant-card-bordered) {
+    border: none;
+  }
+  :global(.ant-card-head-title) {
+    color: #fff;
+  }
+  :global(.ant-select-selector) {
+    color: #333333;
+  }
+
+  .indicators {
+    color: #fff;
+    .indicator {
+      margin: 15px 0;
+      display: flex;
+      justify-content: space-evenly;
+      font-size: 16px;
+      gap: 50px;
+      .icon {
+        width: 20px;
+        height: 16.2px;
+      }
+    }
+  }
+}
