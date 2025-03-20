@@ -12,52 +12,58 @@ import { eventEmitter } from "@/utils/events";
 
 const treeData: TreeDataNode[] = [
   {
-    title: "生态监测",
-    key: "生态监测",
+    title: "国能资源一张图",
+    key: "国能资源一张图",
     children: [
       {
         title: "煤矿",
         key: "煤矿",
-        children: [
-          {
-            title: "黑岱沟煤矿",
-            key: "黑岱沟煤矿",
-          },
-          {
-            title: "神东煤炭",
-            key: "神东煤炭",
-            children: [
-              {
-                title: "大柳塔煤矿",
-                key: "大柳塔煤矿",
-              },
-              {
-                title: "补连塔煤矿",
-                key: "补连塔煤矿",
-              },
-              {
-                title: "椾家梁煤矿",
-                key: "椾家梁煤矿",
-              },
-              {
-                title: "上湾煤矿",
-                key: "上湾煤矿",
-              },
-              {
-                title: "哈拉沟煤矿",
-                key: "哈拉沟煤矿",
-              },
-              {
-                title: "保德煤矿",
-                key: "保德煤矿",
-              },
-              {
-                title: "乌兰木伦煤矿",
-                key: "乌兰木伦煤矿",
-              },
-            ],
-          },
-        ],
+        // children: [
+        //   {
+        //     title: "煤矿",
+        //     key: "煤矿",
+        //     children: [
+        //       {
+        //         title: "黑岱沟煤矿",
+        //         key: "黑岱沟煤矿",
+        //       },
+        //       {
+        //         title: "神东煤炭",
+        //         key: "神东煤炭",
+        //         children: [
+        //           {
+        //             title: "大柳塔煤矿",
+        //             key: "大柳塔煤矿",
+        //           },
+        //           {
+        //             title: "补连塔煤矿",
+        //             key: "补连塔煤矿",
+        //           },
+        //           {
+        //             title: "椾家梁煤矿",
+        //             key: "椾家梁煤矿",
+        //           },
+        //           {
+        //             title: "上湾煤矿",
+        //             key: "上湾煤矿",
+        //           },
+        //           {
+        //             title: "哈拉沟煤矿",
+        //             key: "哈拉沟煤矿",
+        //           },
+        //           {
+        //             title: "保德煤矿",
+        //             key: "保德煤矿",
+        //           },
+        //           {
+        //             title: "乌兰木伦煤矿",
+        //             key: "乌兰木伦煤矿",
+        //           },
+        //         ],
+        //       },
+        //     ],
+        //   },
+        //  ],
       },
       {
         title: "电力",
@@ -71,51 +77,47 @@ const treeData: TreeDataNode[] = [
         title: "运输场站",
         key: "运输场站",
       },
-    ],
-  },
-  {
-    title: "路网管理",
-    key: "路网管理",
-    children: [
       {
-        title: "铁路",
-        key: "铁路",
+        title: "路网管理",
+        key: "路网管理",
+        children: [
+          {
+            title: "铁路",
+            key: "铁路",
+          },
+          {
+            title: "公路",
+            key: "公路",
+          },
+        ],
       },
       {
-        title: "公路",
-        key: "公路",
+        title: "气象预警",
+        key: "气象预警",
+        children: [
+          {
+            title: "降温预警",
+            key: "降温预警",
+          },
+          {
+            title: "台风预警",
+            key: "台风预警",
+          },
+        ],
       },
       {
-        title: "皮带",
-        key: "皮带",
-      },
-    ],
-  },
-  {
-    title: "气象预警",
-    key: "气象预警",
-    children: [
-      {
-        title: "降温预警",
-        key: "降温预警",
-      },
-      {
-        title: "台风预警",
-        key: "台风预警",
-      },
-    ],
-  },
-  {
-    title: "北斗定位",
-    key: "北斗定位",
-    children: [
-      {
-        title: "人员",
-        key: "人员",
-      },
-      {
-        title: "车辆",
-        key: "车辆",
+        title: "北斗定位",
+        key: "北斗定位",
+        children: [
+          {
+            title: "人员",
+            key: "人员",
+          },
+          {
+            title: "车辆",
+            key: "车辆",
+          },
+        ],
       },
     ],
   },
@@ -160,7 +162,7 @@ const LeftPanel = ({
     if (!(checkedKeys as Key[]).length) {
       changeModule("total");
     }
-    if ((checkedKeys as Key[]).includes("生态监测")) {
+    if ((checkedKeys as Key[]).includes("煤矿")) {
       changeModule("monitor");
     }
     if ((checkedKeys as Key[]).includes("路网管理")) {
@@ -175,16 +177,28 @@ const LeftPanel = ({
     if ((checkedKeys as Key[]).includes("子公司")) {
       changeModule("company");
     }
-    if (key.includes("生态监测")) {
+    if (key.includes("国能资源一张图")) {
       drawCoal(info.checked);
       drawElec(info.checked);
       drawChem(info.checked);
       drawTrans(info.checked);
-      if (!info.checked) {
-        eventEmitter.emit("popup:close");
-      }
-      return;
+      drawTrain(info.checked);
+      drawHighway(info.checked);
+      drawWeather(info.checked);
+      drawYutu(info.checked);
+      drawCar(info.checked);
+      drawHuman(info.checked);
     }
+    // if (key.includes("生态监测")) {
+    //   drawCoal(info.checked);
+    //   drawElec(info.checked);
+    //   drawChem(info.checked);
+    //   drawTrans(info.checked);
+    //   if (!info.checked) {
+    //     eventEmitter.emit("popup:close");
+    //   }
+    //   return;
+    // }
     if (key.includes("煤")) {
       drawCoal(info.checked);
       return;
@@ -245,35 +259,6 @@ const LeftPanel = ({
     //   drawCompany(info.checked);
     //   return;
     // }
-  };
-
-  const drawCompany = (visible: boolean) => {
-    const mapDisplay = window.map.getMapDisplay();
-    const points = [
-      { x: 116.403215, y: 40.001028 },
-      { x: 87.664793, y: 44.118945 },
-      { x: 113.4269, y: 23.09831 },
-      { x: 116.27013, y: 39.913302 },
-    ];
-
-    if (visible) {
-      points.forEach((point: Record<string, any>, index: number) => {
-        mapDisplay.img([point.x, point.y], {
-          url: "/images/index/company.png",
-          id: "company" + index,
-          style: {
-            width: 24,
-            height: 24,
-            scale: 1,
-          },
-        });
-      });
-    } else {
-      const arr = new Array(points.length).fill(true);
-      arr.forEach((a, index) => {
-        mapDisplay.clearFeatureById("company" + index);
-      });
-    }
   };
 
   const drawHuman = (visible: boolean) => {
@@ -473,7 +458,7 @@ const LeftPanel = ({
         });
 
         weatherLayer.set("id", "weather");
-        weatherLayer.setZIndex(9);
+        weatherLayer.setZIndex(1);
         window.map.addLayer(weatherLayer);
         return;
       }
@@ -524,7 +509,7 @@ const LeftPanel = ({
     fetch("/geojsons/index/meikuang.geojson")
       .then((response) => response.json())
       .then((response) => {
-        mapExtend(response);
+        // mapExtend(response);
         response.features.forEach(
           (feature: Record<string, any>, index: number) => {
             mapDisplay.img(
@@ -539,7 +524,7 @@ const LeftPanel = ({
                   width: 20,
                   height: 20,
                   scale: 1,
-                }
+                },
               }
             );
           }
@@ -567,7 +552,7 @@ const LeftPanel = ({
                   width: 20,
                   height: 20,
                   scale: 1,
-                }
+                },
               }
             );
           }
@@ -595,7 +580,7 @@ const LeftPanel = ({
                   width: 20,
                   height: 20,
                   scale: 1,
-                }
+                },
               }
             );
           }
@@ -623,7 +608,7 @@ const LeftPanel = ({
                   width: 20,
                   height: 20,
                   scale: 1,
-                }
+                },
               }
             );
           }
@@ -659,7 +644,7 @@ const LeftPanel = ({
           point.longitude,
           point.latitude,
         ]);
-        window.map.centerAt(polylines[0], 5);
+        // window.map.centerAt(polylines[0], 5);
         mapDisplay.polyline(polylines, {
           id: "yutu_polyline",
         });

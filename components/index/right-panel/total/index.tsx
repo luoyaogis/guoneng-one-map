@@ -66,9 +66,8 @@ const options: echarts.EChartsOption = {
         color: "#fff",
       },
       data: [
-        { value: 300, name: "铁路" },
+        { value: 200, name: "铁路" },
         { value: 500, name: "公路" },
-        { value: 300, name: "皮带" },
       ],
       emphasis: {
         itemStyle: {

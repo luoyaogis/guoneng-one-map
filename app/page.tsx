@@ -16,8 +16,8 @@ export default function Home() {
       <LeftPanel changeModule={(value) => setModule(value)} />
       <Legend module={module} />
       <Popup />
-      <AIChat />
-      <History />
+      {/* <AIChat />
+      <History /> */}
       <MapContainer />
       <RightPanel module={module} />
     </div>
