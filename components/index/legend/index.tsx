@@ -1,6 +1,7 @@
 "use client";
 import styles from "./legend.module.scss";
-const monitors = [
+
+const legends = [
   {
     title: "煤矿",
     img: "/images/index/煤.png",
@@ -17,9 +18,6 @@ const monitors = [
     title: "运输场站",
     img: "/images/index/运.png",
   },
-];
-
-const weathers = [
   {
     title: "铁路",
     img: "/images/index/铁路.png",
@@ -28,9 +26,6 @@ const weathers = [
     title: "公路",
     img: "/images/index/公路.png",
   },
-];
-
-const locations = [
   {
     title: "人员",
     img: "/images/index/human.png",
@@ -41,9 +36,9 @@ const locations = [
   },
 ];
 
-export default ({ module }: { module: string }) => {
-  const renderMonitor = () => {
-    return monitors.map((legend) => {
+export default () => {
+  const renderLegend = () => {
+    return legends.map((legend) => {
       return (
         <div className={styles.legend}>
           <img src={legend.img} alt="" className={styles.icon} />
@@ -53,53 +48,5 @@ export default ({ module }: { module: string }) => {
     });
   };
 
-  const renderRoad = () => {
-    return weathers.map((legend) => {
-      return (
-        <div className={styles.legend}>
-          <img
-            src={legend.img}
-            alt=""
-            className={styles.icon}
-            style={{ width: 50, height: 10 }}
-          />
-          <span className={styles.name}>{legend.title}</span>
-        </div>
-      );
-    });
-  };
-
-  const renderCompany = () => {
-    return (
-      <div className={styles.legend}>
-        <img src="/images/index/company.png" alt="" className={styles.icon} />
-        <span className={styles.name}>公司</span>
-      </div>
-    );
-  };
-
-  const renderLocation = () => {
-    return locations.map((legend) => {
-      return (
-        <div className={styles.legend}>
-          <img src={legend.img} alt="" className={styles.icon} />
-          <span className={styles.name}>{legend.title}</span>
-        </div>
-      );
-    });
-  };
-
-  return (
-    <div
-      className={styles.legends}
-      style={{
-        display: ["total", "weather"].includes(module) ? "none" : "block",
-      }}
-    >
-      {module === "monitor" ? renderMonitor() : null}
-      {module === "road" ? renderRoad() : null}
-      {module === "location" ? renderLocation() : null}
-      {module === "company" ? renderCompany() : null}
-    </div>
-  );
+  return <div className={styles.legends}>{renderLegend()}</div>;
 };

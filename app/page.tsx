@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <LeftPanel changeModule={(value) => setModule(value)} />
-      <Legend module={module} />
+      <Legend />
       <Popup />
       {/* <AIChat />
       <History /> */}

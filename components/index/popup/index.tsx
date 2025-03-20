@@ -10,6 +10,7 @@ import { Fill, Stroke, Style } from "ol/style";
 import VectorSource from "ol/source/Vector";
 import { CloseOutlined } from "@ant-design/icons";
 import { eventEmitter } from "@/utils/events";
+import { transform } from "ol/proj";
 
 const colors: Record<string, string> = {
   KQFW: "#FF5918",
@@ -118,10 +119,14 @@ const LeftPanel = () => {
     setTimeout(() => {
       window.map.on("click", (feature) => {
         console.log("feature", feature);
+        const mapDisplay = window.map.getMapDisplay();
+
         setRefreshKey((key) => key + 1);
         const id = feature.getId()?.toString()!;
+        mapDisplay.clearFeatureById("yutu_text");
+        mapDisplay.clearFeatureById("person_text");
+        mapDisplay.clearFeatureById("dev_text");
         if (id === "yutu_png") {
-          const mapDisplay = window.map.getMapDisplay();
           mapDisplay.text([135, 12.8], {
             id: "yutu_text",
             style: {
@@ -136,9 +141,72 @@ const LeftPanel = () => {
 中心位置：135°E | 12.8°N
 最大风速：35m/s
 气旋强度：12级（台风（TY））
-中心气压：970hPa
-`,
+中心气压：970hPa`,
           });
+          return;
+        }
+        if (id.startsWith("human")) {
+          mapDisplay.text(
+            transform(
+              // @ts-ignore
+              feature.getGeometry()?.flatCoordinates,
+              "EPSG:3857",
+              "EPSG:4326"
+            ),
+            {
+              id: "person_text",
+              style: {
+                offsetY: -50,
+                color: "rgb(51, 51, 51)",
+                fontSize: 12,
+                backgroundColor: "rgba(255, 255, 255, 0.8)",
+              },
+              content: `姓名： 张诚扬
+工号：202510234
+所属单位：神东煤炭
+定位时间：2025-3-20 12:20:38
+坐标：${transform(
+                // @ts-ignore
+                feature.getGeometry()?.flatCoordinates,
+                "EPSG:3857",
+                "EPSG:4326"
+              )
+                .map((d) => d.toFixed(4))
+                .join(",")}`,
+            }
+          );
+          return;
+        }
+        if (id.startsWith("car")) {
+          mapDisplay.text(
+            transform(
+              // @ts-ignore
+              feature.getGeometry()?.flatCoordinates,
+              "EPSG:3857",
+              "EPSG:4326"
+            ),
+            {
+              id: "dev_text",
+              style: {
+                offsetY: -50,
+                color: "rgb(51, 51, 51)",
+                fontSize: 12,
+                backgroundColor: "rgba(255, 255, 255, 0.8)",
+              },
+              content: `车牌号： AV1824
+车型：小轿车
+所属单位：神东煤炭
+是否越界：未越界
+坐标：${transform(
+                // @ts-ignore
+                feature.getGeometry()?.flatCoordinates,
+                "EPSG:3857",
+                "EPSG:4326"
+              )
+                .map((d) => d.toFixed(4))
+                .join(",")}`,
+            }
+          );
           return;
         }
         if (!id.startsWith("煤")) return;

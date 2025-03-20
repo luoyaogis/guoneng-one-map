@@ -66,16 +66,16 @@ const treeData: TreeDataNode[] = [
         //  ],
       },
       {
-        title: "电力",
-        key: "电力",
+        title: "电厂",
+        key: "电厂",
       },
       {
-        title: "化工",
-        key: "化工",
+        title: "化工厂",
+        key: "化工厂",
       },
       {
-        title: "运输场站",
-        key: "运输场站",
+        title: "运输站",
+        key: "运输站",
       },
       {
         title: "路网管理",
@@ -152,6 +152,21 @@ const LeftPanel = ({
 }: {
   changeModule: (value: string) => void;
 }) => {
+  useEffect(() => {
+    setTimeout(() => {
+      drawCoal(true);
+      drawElec(true);
+      drawChem(true);
+      drawTrans(true);
+      drawTrain(true);
+      drawHighway(true);
+      drawWeather(true);
+      drawYutu(true);
+      drawCar(true);
+      drawHuman(true);
+    }, 1000);
+  }, []);
+
   const onSelect: TreeProps["onSelect"] = (selectedKeys, info) => {
     console.log("selected", selectedKeys, info);
   };
@@ -159,24 +174,24 @@ const LeftPanel = ({
   const onCheck: TreeProps["onCheck"] = (checkedKeys, info) => {
     console.log("onCheck", checkedKeys, info);
     const key = info.node.key as string;
-    if (!(checkedKeys as Key[]).length) {
-      changeModule("total");
-    }
-    if ((checkedKeys as Key[]).includes("煤矿")) {
-      changeModule("monitor");
-    }
-    if ((checkedKeys as Key[]).includes("路网管理")) {
-      changeModule("road");
-    }
-    if ((checkedKeys as Key[]).includes("气象预警")) {
-      changeModule("weather");
-    }
-    if ((checkedKeys as Key[]).includes("北斗定位")) {
-      changeModule("location");
-    }
-    if ((checkedKeys as Key[]).includes("子公司")) {
-      changeModule("company");
-    }
+    // if (!(checkedKeys as Key[]).length) {
+    //   changeModule("total");
+    // }
+    // if ((checkedKeys as Key[]).includes("煤矿")) {
+    //   changeModule("monitor");
+    // }
+    // if ((checkedKeys as Key[]).includes("路网管理")) {
+    //   changeModule("road");
+    // }
+    // if ((checkedKeys as Key[]).includes("气象预警")) {
+    //   changeModule("weather");
+    // }
+    // if ((checkedKeys as Key[]).includes("北斗定位")) {
+    //   changeModule("location");
+    // }
+    // if ((checkedKeys as Key[]).includes("子公司")) {
+    //   changeModule("company");
+    // }
     if (key.includes("国能资源一张图")) {
       drawCoal(info.checked);
       drawElec(info.checked);
@@ -754,9 +769,9 @@ const LeftPanel = ({
       >
         <Tree
           checkable
-          defaultExpandedKeys={["生态监测", "煤矿", "神东煤炭"]}
-          // defaultSelectedKeys={["生态监测"]}
-          // defaultCheckedKeys={["生态监测"]}
+          defaultExpandedKeys={["国能资源一张图"]}
+          defaultSelectedKeys={["国能资源一张图"]}
+          defaultCheckedKeys={["国能资源一张图"]}
           onSelect={onSelect}
           onCheck={onCheck}
           treeData={treeData}

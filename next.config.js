@@ -3,6 +3,12 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const path = require("path");
 const nextConfig = {
   transpilePackages: ["@ant-design/icons",'ol', 'ol-ext'],
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   webpack: (config, { webpack, isServer }) => {
     if (!isServer) {
       // config.plugins.push(

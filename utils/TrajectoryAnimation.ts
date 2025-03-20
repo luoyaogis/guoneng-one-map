@@ -57,7 +57,7 @@ class TrajectoryAnimation {
     this.source = new VectorSource({ features: [this.feature] });
     this.layer = new VectorLayer({ source: this.source });
     this.layer.set("id", "track");
-    this.layer.setZIndex(9);
+    this.layer.setZIndex(999);
     // 初始化轨迹图层
     this.trajectoryLayer = new VectorLayer({
       source: new VectorSource({
@@ -76,7 +76,7 @@ class TrajectoryAnimation {
       })
     });
     this.trajectoryLayer.set("id", "track_polyline");
-    this.trajectoryLayer.setZIndex(9);
+    this.trajectoryLayer.setZIndex(999);
   }
 
   // 自动缩放到轨迹范围
@@ -141,7 +141,7 @@ class TrajectoryAnimation {
     (window as any).map.addLayer(this.trajectoryLayer);
     (window as any).map.addLayer(this.layer);
     this.zoomToTrajectory();
-
+    console.log("start");
     this.isRunning = true;
     this.currentIndex = 0;
     this.initSegment();

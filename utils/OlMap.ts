@@ -141,6 +141,7 @@ class MapDisplay {
         fill: new Fill({
           color: style?.color || '#333'
         }),
+        textAlign: "left",
         backgroundFill: style?.backgroundColor ? new Fill({
           color: style?.backgroundColor
         }) : undefined,
